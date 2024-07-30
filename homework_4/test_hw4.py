@@ -54,7 +54,9 @@ def test_random_list():
     Создайте список из 10 случайных чисел от 1 до 100 (включая обе границы) и отсортируйте его по возрастанию.
     """
     # TODO создайте список
-    l = sorted([random.randint(1, 100) for i in range(10)])
+    
+    l = [random.randint(1, 100) for i in range(10)]
+    l.sort()
 
     assert len(l) == 10
     assert all(l[i] <= l[i + 1] for i in range(len(l) - 1))
@@ -89,3 +91,4 @@ def test_dicts():
     assert len(d) == 5
     assert list(d.keys()) == first
     assert list(d.values()) == second
+
