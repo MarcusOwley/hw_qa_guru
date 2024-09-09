@@ -6,9 +6,7 @@ def date_generator(day: int, month: int, year: int):
     browser.element('#dateOfBirthInput').click()
     browser.element(f'.react-datepicker__month-select option[value="{month - 1}"]').click()
     browser.element(f'.react-datepicker__year-select option[value="{year}"]').click()
-    #browser.element(f'.react-datepicker__day'
-    #                f'.react-datepicker__day--{day:03d}').click()
-    if day > 9:
+    if day >= 10:
         browser.element(f'.react-datepicker__day.react-datepicker__day--0{day}').click()
     else:
         browser.element(f'.react-datepicker__day.react-datepicker__day--00{day}').click()
