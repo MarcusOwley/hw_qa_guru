@@ -2,12 +2,8 @@ class Product:
     """
     Класс продукта
     """
-    name: str
-    price: float
-    description: str
-    quantity: int
 
-    def __init__(self, name, price, description, quantity):
+    def __init__(self, name: str, price: float, description: str, quantity: int):
         self.name = name
         self.price = price
         self.description = description
